@@ -1,72 +1,26 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ressursarkiv</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link href="style.css" rel="stylesheet" media="all">
-    <script src="ressurser.js" defer></script>
-
-
-
+    <link rel="stylesheet" href="./style.css">
+    <title>Arbeidskrav 1</title>
 </head>
 <body>
+    <main>
+        <button id="knpHTML" onclick="HTMLmap()">HTML</button>
+        <button id="knpCSS" onclick="CSSmap()">CSS</button>
+        <button id="knpJScript" onclick="JavaScriptmap()">JavaScript</button>
+        <button id="knpReact" onclick="Reactmap()">React</button>
+        <button id="knpSHCMS" onclick="SHCMSmap()">Sanity and Headless CMS</button>
 
-<main>
-    <nav>
-        <button class="tab active" data-category="html">HTML</button>
-        <button class="tab" data-category="css">CSS</button>
-        <button class="tab" data-category="js">JavaScript</button>
-        <button class="tab" data-category="react">React</button>
-        <button class="tab" data-category="cms">Sanity and headless CMS</button>
-    </nav>
+        <section>
+            <nav id="main">
+                
+            </nav>
+        </section>
+    </main>
 
-    <section id="html" class="active">
-        <h2>HTML</h2>
-        <p>HTML står for HyperText Markup Language, og er et strukturspråk som brukes for å lage strukturer til nettside- og applikasjonsgrensesnitt.</p>
-        <ul>
-            <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools</a></li>
-            <li><a href="https://html.spec.whatwg.org/" target="_blank">HTML Living standard</a></li>
-            <li><a href="https://www.html.com/" target="_blank">HTML.com Tutorials</a></li>
-        </ul>
-    </section>
-
-    <section id="css">
-        <h2>CSS</h2>
-        <p>CSS brukes til å style HTML-elementer på en nettside.</p>
-    </section>
-
-    <section id="js">
-        <h2>JavaScript</h2>
-        <p>JavaScript gjør nettsider interaktive.</p>
-    </section>
-
-    <section id="react">
-        <h2>React</h2>
-        <p>React er et JavaScript-bibliotek for å bygge brukergrensesnitt.</p>
-    </section>
-
-    <section id="cms">
-        <h2>Sanity and Headless CMS</h2>
-        <p>Sanity er en headless CMS-løsning for fleksibel innholdsadministrasjon.</p>
-    </section>
-</main>
-
-<script>
-    const tabs = document.querySelectorAll(".tab");
-    const sections = document.querySelectorAll("section");
-
-    tabs.forEach(tab => {
-        tab.addEventListener("click", () => {
-            tabs.forEach(t => t.classList.remove("active"));
-            sections.forEach(s => s.classList.remove("active"));
-
-            tab.classList.add("active");
-            document.getElementById(tab.dataset.category).classList.add("active");
-        });
-    });
-</script>
-
+    <script src="./ressurser.js"></script>
 </body>
 </html>
